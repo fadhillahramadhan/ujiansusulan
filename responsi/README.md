@@ -1,6 +1,6 @@
 ## Running apps with docker
 `docker-compose up -d`
-
+`open localhost:5000`
 
 ## Folder 
 folder app dibuat untuk membuat rest api dan dockerfile

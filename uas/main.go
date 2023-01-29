@@ -6,11 +6,18 @@ import (
 	"log"
 	"time"
 
+    "github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 )
 
 
-func main() {
+
+// func main() {
+// 	
+
+// }
+
+func users(c *gin.Context) {
 	fmt.Println("Connecting to db")
 	conn, err := sql.Open("mysql", "root:root@tcp(db:3306)/testdb")
 	if err != nil {
@@ -80,7 +87,13 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Printf("%+v", person)
+		// fmt.Printf("%+v", person)
 	}
+	c.JSON(200,person)
+}
 
+func main() {
+	r := gin.Default()
+	r.GET("/users", users)
+	r.Run(":8080")
 }
