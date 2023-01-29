@@ -95,5 +95,5 @@ func users(c *gin.Context) {
 func main() {
 	r := gin.Default()
 	r.GET("/users", users)
-	r.Run(":8080")
+	r.Run(":5000")
 }
