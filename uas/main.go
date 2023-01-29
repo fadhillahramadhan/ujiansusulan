@@ -12,7 +12,7 @@ import (
 
 func main() {
 	fmt.Println("Connecting to db")
-	conn, err := sql.Open("mysql", "root:mypassword@tcp(db:3306)/testdb")
+	conn, err := sql.Open("mysql", "root:root@tcp(db:3306)/testdb")
 	if err != nil {
 		log.Fatal(err)
 	}

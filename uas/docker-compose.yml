@@ -16,9 +16,9 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: unless-stopped
     environment: # add default values, see docs for more info.
-      MYSQL_USER: user
-      MYSQL_ROOT_PASSWORD: mypassword
-      MYSQL_PASSWORD: mypassword
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
       MYSQL_DATABASE: testdb # create this database on startup
     volumes:
       - my-db:/var/lib/mysql
